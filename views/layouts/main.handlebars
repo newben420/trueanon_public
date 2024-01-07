@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>{{site.slogan}}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="{{site.themeColor}}">
+	<meta content="{{site.keywords}}" name="keywords">
+	<meta name="description" content="{{site.description}}" >
+	<meta name="author" content="{{site.developer}}" >
+	<meta property="og:description" content="{{site.description}}" >
+	<meta content="{{site.addr}}{{site.image}}" property="og:image">
+	<meta content="{{site.addr}}{{site.image}}" name="image">
+	<link href="{{site.addr}}{{site.favicon}}" rel="icon">
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="{{site.domain}}"/>
+	<meta name="twitter:title" content="{{site.slogan}}"/>
+	<meta name="title" content="{{site.slogan}}"/>
+	<meta name="twitter:description" content="{{site.description}}"/>
+	<link href="{{site.addr}}{{site.appleFavicon}}" rel="apple-touch-icon">
+	<meta name="twitter:creator" content="{{site.brand}}"/>
+	<meta name="twitter:image" content="{{site.addr}}{{site.image}}"/>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+	var socket = io();
+	var dnow = {{dnow}};
+	var year = {{date.year}};
+	var siteurl = "{{site.addr}}";
+	var csrfx = "{{_csrfToken}}";
+	</script>
+	{{!-- font awesome --}}
+	<link rel="stylesheet" href="/frameworks/fontawesome-free-6.3.0-web/css/fontawesome.min.css">
+	<link rel="stylesheet" href="/frameworks/fontawesome-free-6.3.0-web/css/brands.min.css">
+	<link rel="stylesheet" href="/frameworks/fontawesome-free-6.3.0-web/css/solid.min.css">
+	<script src="/frameworks/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/js/script.js"></script>
+</head>
+<body>
+	{{{body}}} 
+</body>
+</html>
+	
+
+

@@ -1,0 +1,21 @@
+        <header id="header">
+            <div id="header-top">
+                <div id="header-top-logo">
+                    <a href="/">
+                        <img src="{{site.logo}}" alt="logo">
+                    </a>
+                </div>
+                <div id="header-top-btn">
+                    <button onclick="nav(this)" id="menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <nav id="header-bottom">
+                <ul>
+                    <li class="{{#if page.home}}active{{/if}}"><a href="/"><i class="fa-solid fa-home"></i> <span>Home</span></a></li>
+                    <li class="{{#if page.create}}active{{/if}}"><a href="/create-link"><i class="fa-solid fa-link"></i> <span>Create A Link</span></a></li>
+                    <li class="{{#if page.manage}}active{{/if}}"><a href="/manage-messages"><i class="fa-solid fa-message"></i> <span>Manage Messages (Login)</span></a></li>
+                </ul>
+            </nav>
+        </header>

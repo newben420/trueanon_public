@@ -1,0 +1,18 @@
+LOG FILE CREATED ON Jun 12, 2023 at 07:52 AM 
+
+
+Jun 12, 2023 at 07:52 AM => UNCAUGHT EXPRESSION: TypeError: fn is not a function
+
+
+Jun 12, 2023 at 07:15 PM => UNCAUGHT EXPRESSION: TypeError: devSocks.push is not a function
+
+
+Jun 12, 2023 at 07:16 PM => UNCAUGHT EXPRESSION: TypeError: devSocks.push is not a function
+
+
+Jun 12, 2023 at 07:18 PM => UNCAUGHT EXPRESSION: TypeError: devSocks.push is not a function
+
+
+Jun 12, 2023 at 07:18 PM => UNCAUGHT EXPRESSION: TypeError: devSocks.push is not a function
+
+

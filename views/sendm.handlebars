@@ -1,0 +1,36 @@
+{{>header}}
+
+        <div class="form-cont">
+            <div class="form">
+                <h1 class="form-header">Send an Anonymous Message to {{l.name}}</h1>
+                <p class="form-ins">Type your message in the input field below. {{l.name}} will never find out who sent it.</p>
+                <p class="form-ins text-right"><span id="mcou">0</span> / 500</p>
+                <textarea onkeyup="mcou(this)" maxlength="500" id="mess" placeholder="Type message here..." rows="10"></textarea>
+                <div class="text-right pd20">
+                    <button onclick="sendMessage('{{l.token}}',{{l.id}})" class="solid-btn">Send Message</button>
+                </div>
+                <div class="hxr"></div>
+                <div class="pd20">
+                    <p class="text">
+                    Would you like to share this link? 
+                    </p>
+                    <div id="sharex-page">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+                </div>
+                <div class="hxr"></div>
+                <div class="pd20">
+                    <p class="text">
+                    Would you want a link like this to receive anonymous messages too? <a href="/create-link">Click here, it's free, quick and easy.</a>
+                    </p>
+                </div>
+                <div class="hxr"></div>
+                <div class="pd20">
+                    <p class="text">
+                    Are you {{l.name}}? <a href="/manage-messages">Click here to view and manage anonymous messages sent on this link.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {{>footer}}

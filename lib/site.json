@@ -1,0 +1,52 @@
+{
+	"domain":"trueanon.online",
+	"brand":"TrueAnon",
+	"brandABBR":"TA",
+	"brandLink":"/",
+	"mode":"dev",
+	"prod":{
+		"sql":{
+			"host":"hidden_from_public",
+			"user":"hidden_from_public",
+			"pass":"hidden_from_public",
+			"db":"hidden_from_public"
+		},
+		"addr":"https://trueanon.online"
+	},
+	"dev":{
+		"sql":{
+			"host":"localhost",
+			"user":"root",
+			"pass":"",
+			"db":"trueanon"
+		},
+		"addr":"http://localhost:3000"
+	},
+	"slogan":"Exchange Anonymous Messages, Truly Express Yourself For Free | TrueAnon",
+	"parseLimit":10,
+	"logo":"/img/logo.png",
+	"image":"/img/banner.png",
+	"fetchLimit":10,
+	"fetchMax":1000,
+	"icon":"/icon.png",
+	"favicon":"/favicon.ico",
+	"privilege":"bigben",
+	"appleFavicon":"/favicon.ico",
+	"themeColor":"#282828",
+	"keywords":"send, receive, exchange, anonymous, messages, link, trueanon",
+	"email":"admin@trueanon.online",
+	"description":"Receive anonymous messages and become acquainted with how your friends, family, followers and fans secretly feel about you.",
+	"socketToken":"hidden_from_public",
+	"maintenance":false,
+	"smtp":{
+		"host":"hidden_from_public",
+		"user":"hidden_from_public",
+		"port":0,
+		"pass":"hidden_from_public"
+	},
+	"twitter":"hidden_from_public",
+	"facebook":"hidden_from_public",
+	"price":"10.00",
+	"currency":"US$",
+	"currencyABBR":"USD"
+}

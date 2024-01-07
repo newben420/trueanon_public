@@ -1,0 +1,27 @@
+{{>header}}
+        <div class="form-cont">
+            <div class="form">
+                <h1 class="form-header text-left pad10">Welcome Back, {{l.name}}!</h1>
+                <p class="form-ins pad10x">
+                    Linked created: {{#dfts l.res_ts}}{{/dfts}}
+                    <br/>
+                    Last Logged In: {{#dfts l.log_ts}}{{/dfts}}
+                    <br/>
+                    You have <span id="newmess"><i class="fa-solid fa-spinner fa-pulse"></i></span> new message(s)
+                    <br/>
+                    You have <span id="totmess">{{l.message_count}}</span> total message(s)
+                </p>
+                <div class="text-right pad10x" id="db-headx">
+                    <button class="light-btn" onclick="load_user(2)">Refresh <i class="fa-solid fa-refresh"></i></button>
+                    <button class="light-btn" onclick="searchfx()">Search <i class="fa-solid fa-search"></i></button>
+                    <button class="light-btn" onclick="changepw()">Change Password <i class="fa-solid fa-key"></i></button>
+                    <button class="light-btn" onclick="logout()">Logout <i class="fa-solid fa-sign-out"></i></button>
+                    <button class="light-btn" onclick="news()"><i class="fa-solid fa-envelope"></i></button>
+                    <button class="light-btn reddy" onclick="deletelink()">Delete Link <i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="hxrx"></div>
+                <div id="messages">
+                    <p class="form-ins text-center grey"><i class="fa-solid fa-spinner fa-pulse"></i> Loading anonymous messages... Please wait.</p>
+                </div>
+            </div>
+        </div>

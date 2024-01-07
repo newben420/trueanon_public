@@ -1,0 +1,101 @@
+{{#section 'head'}}
+	<script src="/frameworks/popper/popper.min.js"></script>
+	<link rel="stylesheet" href="/frameworks/bootstrap/css/bootstrap.min.css">
+	<script src="/frameworks/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		var defaultCover = "{{site.image}}";
+		var adminUN = "{{username}}";
+		var plim = {{site.parseLimit}};
+	</script>
+{{/section}}
+
+<div id="container">
+		<div id="sidePane">
+		</div>
+		<div id="side" class="titi">
+			<div id="sideTop">
+				<div id="userDet">
+					<span ondblclick="load_admin()" class="cursor">{{username}}</span> <button onclick="logout()"><i class="fa-solid fa-power-off"></i></button><br>
+				</div>
+				<a href="/" id="logo">
+					<img height="50px" width="auto" src="{{site.icon}}">
+				</a>
+				<button onclick="menu()" id="sideClose"><i class="fa-solid fa-arrow-left"></i></button>
+			</div>
+			<div id="sideLinks" class="">
+				<div class="linkGroup">
+					<div onclick="dbtab(1)" class="link"><i class="linkIcon fa-solid fa-dashboard"></i><span class="linkText">Dashboard</span><span class="linkBadge"><span id="" class="badge"></span></span></div>
+					<div onclick="dbtab(2)" class="link"><i class="linkIcon fa-solid fa-link"></i><span class="linkText">Links</span><span class="linkBadge"><span id="" class="badge"></span></span></div>
+					<div onclick="dbtab(3)" class="link"><i class="linkIcon fa-solid fa-cog"></i><span class="linkText">Settings</span><span class="linkBadge"><span class="badge"></span></span></div>				
+				</div>
+				<div class="linkGroup">
+					<div onclick="downloadLogs()" class="link"><i class="linkIcon fa-solid fa-clock"></i><span class="linkText">Download Logs</span><span class="linkBadge"><span id="" class="badge"></span></span></div>
+					<div onclick="addLog()" class="link"><i class="linkIcon fa-solid fa-plus-circle"></i><span class="linkText">Add Log</span><span class="linkBadge"><span id="" class="badge"></span></span></div>
+					<div onclick="deleteLogs()" class="link"><i class="linkIcon fa-solid fa-trash"></i><span class="linkText">Delete Site Logs</span><span class="linkBadge"><span id="" class="badge"></span></span></div>
+					<div onclick="sql()" class="link"><i class="linkIcon fa-solid fa-server"></i><span class="linkText">Query DB</span><span class="linkBadge"><span id="" class="badge"></span></span></div>
+				</div>
+			</div>
+		</div>
+		<div id="mainPane">
+			<header id="header">
+				<div id="header_side">
+					<button onclick="menu()" ><i class="fa-solid fa-navicon"></i></button>
+				</div>
+				<div id="header_main" class="mont">
+					<button id="dbb-1" onclick="dbtab(1)" class="tabBtn hactive">Dashboard</button>
+					<button id="dbb-2" onclick="dbtab(2)" class="tabBtn ">Links</button>
+					<button id="dbb-3" onclick="dbtab(3)" class="tabBtn">Settings</button>
+				</div>
+			</header>
+			
+			<!--db tabs-->
+			<div id="dbtab-1" class="dbtab dactive">
+				 <div class="padten stats">
+				 	<div class="stat titi">
+				 		<h5 class="dark-grey-bg white">Links</h5>
+				 		<p id="lxx" class="light-black"><i class="fa-solid fa-spinner fa-pulse"></i></p>
+				 	</div>
+				 	<div class="stat titi">
+				 		<h5 class="dark-grey-bg white">Messages</h5>
+				 		<p id="mxx" class="light-black"><i class="fa-solid fa-spinner fa-pulse"></i></p>
+				 	</div>
+				 	<div class="stat titi">
+				 		<h5 class="dark-grey-bg white">Connected Sockets</h5>
+				 		<p id="socks" class="light-black"><i class="fa-solid fa-spinner fa-pulse"></i></p>
+				 	</div>
+				 </div>
+			</div>
+			
+			
+			<div id="dbtab-2" class="dbtab">
+				 <h3 class="heading dark-grey marten">Links </h3>
+				 <div id="links" class="wide padten">
+					 <p class="panP grey padtwenty overhide text-center"><i class="fa-solid fa-pulse fa-spinner"></i> Loading links...</p>
+				 </div>
+			</div>
+
+			<div id="dbtab-3" class="dbtab">
+				 <h3 class="heading dark-grey marten">Settings</h3>
+				 <div id="settings" class="wide padten">
+					 <button onclick="updatePass('{{username}}')" class="panButton dark-grey-bg white black-out radfive overhide">Change Password</button>
+				 </div>
+			</div>
+			
+			<!--end of dbtabs -->
+		</div>
+	</div>
+	
+
+
+
+
+
+<div id="tab-mess" class="tab silveri-bg">
+	<div class="headerx titi light-b white-bg">
+		<p class="dark-grey">View Messages</p>
+		<button onclick="cli()" class="dark-grey no-bg"><i class="fa-solid fa-close"></i></button>
+	</div>
+	<div id="messx" class="contx padten">
+		
+	</div>
+</div>
